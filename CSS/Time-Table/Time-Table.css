@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+body{
+    font-family: 'Roboto', sans-serif;
+    font-size: large;
+    background-color: rgb(184, 192, 80);
+    color:rgb(5, 81, 132)
+}
+
+table{
+    width:80%;
+    background-color:rgb(179, 150, 44);
+    margin: auto;
+    margin-top:250px;
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+th{
+    width:10%;
+    border: 1px solid black;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+td{
+    border: 1px solid black;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+#time{
+    background-color:rgb(118, 171, 77);
+}
+
+#headRow{
+    height: 50px;
+    background-color:rgb(118, 171, 77);
+}
+
+tr{
+    height: 25px;
+}
+
+tr:nth-child(even){
+    background-color: rgb(209, 170, 29);
+}
+
+tr:hover{
+    background-color: rgb(157, 131, 183);
+}

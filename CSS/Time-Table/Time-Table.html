@@ -4,22 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Time Table</title>
-
-    <style>
-        table, th, td {
-            border: 1px solid black;
-            border-collapse: collapse;
-        }
-        th, td {
-            text-align: center;
-        }
-    </style>
+    <link rel="stylesheet" href="Time-Table.css">
 </head>
 <body>
-    <table style="width:100%">
+    <table>
         <caption><b>Time Table</b></caption>
-        <tr style="height: 50px">
-          <th style="width:10%"></th>
+        <tr id="headRow">
+          <th></th>
           <th>Mon</th>
           <th>Tue</th>
           <th>Wed</th>
@@ -28,37 +19,37 @@
           <th>Sat</th>
           <th>Sun</th>
         </tr>
-        <tr style="height: 25px">
-          <td>7:00AM-8:00AM</td>
+        <tr>
+          <td id="time">7:00AM-8:00AM</td>
           <td colspan="7">WAKE-UP AND BREAKFAST</td>
         </tr>
-        <tr style="height: 25px">
-          <td>8:00AM-12:00PM</td>
+        <tr>
+          <td id="time">8:00AM-12:00PM</td>
           <td colspan="5">COLLEGE</td>
           <td>Spare</td>
           <td>Spare</td>
         </tr>
-        <tr style="height: 25px">
-          <td>12:00PM-1:00PM</td>
+        <tr>
+          <td id="time">12:00PM-1:00PM</td>
           <td colspan="7">LUNCH</td>
           
         </tr>
-        <tr style="height: 25px">
-          <td>1:00PM-6:00PM</td>
+        <tr>
+          <td id="time">1:00PM-6:00PM</td>
           <td colspan="5">COLLEGE</td>
           <td>Spare</td>
           <td>Spare</td>
         </tr>
-        <tr style="height: 25px">
-          <td>6:00PM-7:30PM</td>
+        <tr>
+          <td id="time">6:00PM-7:30PM</td>
           <td colspan="7">DINNER</td>
         </tr>
-        <tr style="height: 25px">
-          <td>7:30PM-12:30AM</td>
+        <tr>
+          <td id="time">7:30PM-12:30AM</td>
           <td colspan="7">STUDY</td>
         </tr>
-        <tr style="height: 25px">
-          <td>12:30AM-7:00AM</td>
+        <tr>
+          <td id="time">12:30AM-7:00AM</td>
           <td colspan="7">SLEEP</td>
         </tr>
        
