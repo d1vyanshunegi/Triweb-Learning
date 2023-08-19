@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Form.css">
+    <title>Form</title>
+</head>
+<body>
+    <h2>Form</h2>
+
+    <form onsubmit="return validateForm()">
+        <label for="fName">First Name:</label><br>
+        <input type="text" id="fName" name="fName"><br><br>
+        <label for="lName">Last Name:</label><br>
+        <input type="text" id="lName" name="lName"><br><br>
+        <label for="eMail">E-Mail:</label><br>
+        <input type="email" id="eMail" name="eMail"><br><br>
+        <label for="contact">Contact:</label><br>
+        <input type="tel" id="phone" name="phone" placeholder="+91"><br><br>
+        <label for="dob">DOB:</label><br>
+        <input type="date" id="dob" name="dob"><br><br>
+        <label for="age">Age:</label><br>
+        <input type="number" id="age" name="age"><br><br>
+        <label for="gender">Gender:</label><br>
+        <input type="radio" id="male" name="gender" value="Male">
+        <label for="male">Male</label><br>
+        <input type="radio" id="female" name="gender" value="Female">
+        <label for="female">Female</label><br>
+        <input type="radio" id="other" name="gender" value="Other">
+        <label for="other">Other</label><br><br>
+        <label for="resume">Resume:</label><br>
+        <input type="file" id="resume" name="resume"><br><br>
+        <input type="submit" value="Submit">
+    </form>
+
+    <script src="script.js"></script>
+</body>
+</html>
