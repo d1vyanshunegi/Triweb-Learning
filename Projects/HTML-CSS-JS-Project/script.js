@@ -1,12 +1,12 @@
 const validateForm = () => {
     let fName = document.getElementById("fName").value;
-    if(fName===0 || fName===null){
+    if(fName==='' || fName===null){
         alert("Enter a valid first name!");
         return false;
     }
 
     let lName = document.getElementById("lName").value;
-    if(lName===0 || lName===null){
+    if(lName==='' || lName===null){
         alert("Enter a valid last name!");
         return false;
     }
@@ -30,7 +30,7 @@ const validateForm = () => {
         }
     }
 
-    let dob = new Date(document.getElementById("dob").value);
+    let dob = document.getElementById("dob").value;
     if(dob===null || dob===''){
         alert("Enter valid DOB!");
         return false;
@@ -38,6 +38,7 @@ const validateForm = () => {
 
     else{
         const today = new Date();
+        dob=new Date(dob);
         if(dob>today){
             alert("Enter valid DOB!");
             return false;
@@ -59,8 +60,15 @@ const validateForm = () => {
         }
     }
     
-    let gender = document.getElementsByName("gender").checked;
-    if(gender===false || gender===null || gender===''){
+    let gender = document.querySelectorAll('input[name="gender"]')
+    let flag=false;
+    for (const gen of gender) {
+        if (gen.checked) {
+            flag=true;
+            break;
+        }
+    }
+    if(flag===false){
         alert("Please choose your gender!");
         return false;
     }
