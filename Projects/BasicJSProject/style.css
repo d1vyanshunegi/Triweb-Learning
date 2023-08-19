@@ -1,0 +1,64 @@
+.main_div{
+    border: 5px solid black;
+    background-color: black;
+    width: 400px;
+    margin: auto;
+}
+
+.user_div{
+    width: 50%;
+    height: 150px;
+}
+
+.red_div{
+    background-color: palevioletred;
+    float:left;
+}
+.green_div{
+    background-color:palegreen;
+    display: inline-block;
+}
+.blue_div{
+    background-color: royalblue;
+    float:left;
+}
+.yellow_div{
+    background-color: palegoldenrod;
+    display: inline-block;
+}
+
+.user_block{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+}
+
+.btn_pro{
+    background-color: chocolate;
+    color: white;
+    border: 2px solid green;
+    height: 30px;
+    width: 150px;
+    margin: 10px 20px;
+
+}
+
+.input_pro{
+    background-color: rgb(238, 229, 223);
+    color: rgb(85, 3, 3);
+    border: 2px solid green;
+    height: 30px;
+    width: 150px;
+    margin-left: 30%;
+    margin-top: 20px;
+}
+
+.my_user{
+    color: rgb(0, 0, 0);
+    width: 100px;
+    height: 40px;
+    font-size: larger;
+    font-weight: bold;
+    border: 3px dotted rgb(121, 77, 77);
+}
