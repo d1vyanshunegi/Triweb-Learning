@@ -1,0 +1,41 @@
+SELECT MAX(salary) FROM teachers
+SELECT MIN(salary) FROM teachers
+SELECT COUNT(id) AS NumberOfTeachers FROM teachers
+SELECT AVG(salary) AS avgSalary FROM teachers
+SELECT SUM(salary) AS totalSalary FROM teachers
+
+SELECT * FROM students WHERE student_name like('A%')
+SELECT * FROM students WHERE class_id IN(1,5,6)
+SELECT * FROM teachers WHERE salary BETWEEN 3000 AND 7000
+
+SELECT cl.class_name, tr.teacher_name AS teacher_name
+FROM classes cl
+LEFT JOIN teacher tr on cl.teacher_id = tr.id
+
+SELECT student_name FROM students
+UNION
+SELECT teacher_name_name FROM teachers
+
+SELECT class_id, COUNT(*) AS numberOfStudents FROM students
+GROUP BY class_id
+ORDER BY numberOfStudents DESC
+
+SELECT class_id, COUNT(*) AS numberOfStudents FROM students
+GROUP BY class_id
+HAVING numberOfStudents > 1
+
+CREATE TABLE teachers_dup(
+    id int NOT null,
+    teachers_name varchar(255) NOT null,
+    mobile varchar(100) NOT null,
+    salary int
+)
+
+INSERT INTO teachers_dup(id, teacher_name, mobile, salary)
+SELECT id, teacher_name, mobile, salary FROM teachers
+WHERE id = 3
+
+
+
+
+

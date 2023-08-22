@@ -41,3 +41,6 @@ update students set mobile='2222' where id=12
 select * from students where class_id = 5;
 select * from students where class_id = 4 or class_id = 5;
 select * from students where mobile = '2222' and class_id=5
+
+select * from students where class_id <> 6 order by class_id asc
+select * from students where class_id <> 6 order by class_id desc
