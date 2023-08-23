@@ -1,17 +1,17 @@
 # Triweb-Learning
 ## HTML
-    ### HTML Form
+    * HTML Form
 
 ## CSS
-    ### Stylesheets for HTML Form and Time-Table
+    * Stylesheets for HTML Form and Time-Table
 
 ## JavaScript
-    ### Important concepts of JavaScript practiced.
+    * Important concepts of JavaScript practiced.
 
 ## Projects
-    ### BasicJSProject
-    ### HTML Form validation project
+    * BasicJSProject
+    * HTML Form validation project
 
 ## MySQL
-    ### Important concepts of SQL practiced.
+    * Important concepts of SQL practiced.
 
