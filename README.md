@@ -15,3 +15,6 @@
 ## MySQL
 * Important concepts of SQL practiced.
 
+## ES6
+* ECMA6 concepts.
+
