@@ -32,3 +32,9 @@ function getData(){
 let {ename: employeeName, salary: employeeSalary, location: {city:employeeCity}} =  getData();
     
 console.log("Ename: ", employeeName, ", Salary: ", employeeSalary, ", Location: ",employeeCity);
+
+arr = [1,2];
+
+[a=7,b=10,c=0,d] = arr;
+
+console.log(a,b,c,d);
