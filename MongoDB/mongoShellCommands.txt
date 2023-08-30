@@ -1,0 +1,75 @@
+//Basic commands
+show dbs
+use <database name> //to create or switch to database
+db.createCollection(<collection name>)  //to create new collection
+db.dropDatabase()   //to drop database
+
+
+//To insert
+db.collection.insertOne(name:"Divyanshu", mobile:10)
+db.collection.insertMany([{name:"Rohit", mobile:7}, {name:"Rahul", mobile:9, location:"Orissa"}])
+
+
+
+//To return all docs in a collection
+db.collection.find()
+db.collection.find({mobile:10})  //passing arguments to find to get specific docs
+db.collection.find().sort({name : -1}).limit(2)  //to sort and limit number of docs
+db.collection.find({}, {name:true, location:true})
+
+
+
+//Update
+db.collection_name.updateOne({name: "Divyanshu"}, {$ set : {mobile : 20}})
+db.collection.updateOne({name: "Rahul"}, {$ unset : {location : ""}})  //unset an attribute
+db.collection_name.updateMany({}, {$ set : {location: 'Dehradun"'}})
+db.collection.updateMany({location : {$ exists:true}}, {$ set : {location: "Clement Town"}})
+
+
+//Delete
+db.collection_name.deleteOne(mobile:20)
+db.collection_name.deleteMany({location:"Clement Town"})
+
+//Comparision Operators
+db.collection_name.find({name : {$ ne : 'Rahul'}})
+db.collection_name.find({name : {$ in : ['Divyanshu', 'Rohit', 'Rahul']}})
+db.collection_name.find({name : {$ nin : ['Divyanshu', 'Rohit']}})
+
+
+//Aggregate and lookup
+db.customer.aggregate([
+  {
+    $lookup: {
+      from: "books",
+      localField: "favBooks",
+      foreignField: "_id",
+      as: "favBookData",
+    }
+  }
+])
+
+//Validate
+validator:{ 
+    $jsonSchema:{
+        bsonType: 'object',
+        required: ['title', 'pname','ownwer,'comments'],
+        properties: { 
+            title: {
+                    bsonType: 'string",
+                    description: 'Title must be string'
+            },
+            pname: {
+                    bsonType: 'string',
+                    description: "pname must be string'
+             },
+            owner:{
+                    bsonType: 'objectId',
+                    description: 'id of customer'
+        },
+        comments: {
+            bsonType: 'string',
+            description: 'comments must be string
+        }
+    }
+  }
+}
