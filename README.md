@@ -11,6 +11,7 @@
 ## Projects
 * BasicJSProject
 * HTML Form validation project
+* BasicNodeJSProject
 
 ## MySQL
 * Important concepts of SQL practiced.
@@ -24,3 +25,6 @@
 ## NodeJS
 * NodeJS and npm modules
 * REST API architecture, routers and controllers
+
+## MongoDB
+* Practiced MongoDB on mongosh and MongoDB Compass GUI
