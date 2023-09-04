@@ -38,4 +38,38 @@ const checkTypesAndInterface = (req:Request,res:Response) => {
     res.send(result);
 }
 
+interface Student{
+    name:String,
+    age: Number
+}
+
+interface Student{
+    level:String
+}
+
+const mergeInterface = (req: Request, res: Response) =>{
+
+    const akarsh:Student  = {name:"Divyanshu", age:20, level:"BTech"};
+}
+
+
+class Employee{
+    ename:String;
+    salary:Number;
+    constructor(name:String, salary:Number){
+        this.ename = name;
+        this.salary = salary;
+    }
+}
+
+class EmployeeWithAge extends Employee {
+    age:Number = 0;
+}
+
+const relatedToClass = (req: Request, res: Response) => {
+    const Ramesh = new EmployeeWithAge("Rohit", 20000);
+    Ramesh.salary = 30000;
+    Ramesh.age = 21;
+}
+
 export {registerUser,checkTypesAndInterface};
