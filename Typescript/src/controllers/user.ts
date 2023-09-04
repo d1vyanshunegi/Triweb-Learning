@@ -1,6 +1,7 @@
-const {addUserToDB} = require('../models/user');
+import { Request,Response } from 'express';
+import {addUserToDB} from '../models/user';
 
-const registerUser = (req,res) => {
+const registerUser = (req:Request,res:Response) => {
 
     const userName = "Divyanshu";
     const password = "Password";
@@ -11,4 +12,4 @@ const registerUser = (req,res) => {
     console.log(result);
 }
 
-module.exports = {registerUser};
+export {registerUser};
