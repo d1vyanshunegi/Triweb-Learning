@@ -1,8 +1,10 @@
 import {Request, Response, NextFunction} from 'express';
 
+import User from '../models/user';
+
 const registerUser = (req:Request,res:Response, next:NextFunction) => {
-    console.log("Registration done!");
-    console.log(req.body);
+    const user = new User(req.body);
+    user.save();
     res.send("Registration done!");
 }
 
