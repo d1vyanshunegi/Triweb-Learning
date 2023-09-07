@@ -5,7 +5,7 @@ import userRoute from './routes/user';
 
 const app = express();
 
-const connectionString = "mongodb+srv://myuser:abcd1234@cluster0.4nafxpq.mongodb.net/workshopdb?retryWrites=true&w=majority"
+const connectionString =  process.env.CONNECTION_STRING || "";
 
 app.use(express.json());
 
@@ -16,5 +16,5 @@ app.get('/', (req,res) => {
 app.use('/user', userRoute);
 
 mongoose.connect(connectionString)
-.then((success) => app.listen(3000))
+.then((success) => app.listen(process.env.PORT))
 .catch((err) => console.log(err.message));
