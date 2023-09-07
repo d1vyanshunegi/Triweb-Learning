@@ -1,9 +1,0 @@
-{
-    "env":{
-        "CONNECTION_STRING":"mongodb+srv://myuser:abcd1234@cluster0.4nafxpq.mongodb.net/workshopdb?retryWrites=true&w=majority",
-        "PORT":3000
-    },
-    "watch":["src"],
-    "ext":"ts,json",
-    "exec": "ts-node ./src/app.ts"
-}
