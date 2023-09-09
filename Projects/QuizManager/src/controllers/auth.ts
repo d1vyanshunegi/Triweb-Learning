@@ -2,16 +2,17 @@ import { Request, Response, NextFunction } from 'express';
 import bcrypt from 'bcryptjs';
 import jwt from 'jsonwebtoken';
 
+import ProjectError from '../helper/error';
 import User from '../models/user';
 
 interface ReturnResponse{
     status:"success" | "error",
     message:String,
-    data:{}
+    data:{} | []
 }
 
 
-const registerUser = async (req: Request, res: Response) => {
+const registerUser = async (req: Request, res: Response,next:NextFunction) => {
     let resp:ReturnResponse;
     try {
 
@@ -31,13 +32,12 @@ const registerUser = async (req: Request, res: Response) => {
             res.send("Registration done!");
         }
     } catch (error) {
-        resp = {status:"error", message:"Something went wrong!", data:{}};
-        res.status(500).send(resp);
+        next(error);
     }
 
 }
 
-const loginUser = async(req:Request,res:Response) => {
+const loginUser = async(req:Request,res:Response,next:NextFunction) => {
     let resp:ReturnResponse;
     try {
         const email = req.body.email;
@@ -55,17 +55,18 @@ const loginUser = async(req:Request,res:Response) => {
                 res.status(200).send(resp);
             }
             else{
-                resp = {status:"error", message:"Credentials mismatch!", data:{}};
-                res.status(401).send(resp);
+                const err =new ProjectError("Credentials mismatch!");
+                err.statusCode = 401;
+                throw err;
             }
         }
         else{
-            resp = {status:"error", message:"User not found!", data:{}};
-            res.status(401).send(resp);
+            const err =new ProjectError("User not found!");
+            err.statusCode = 401;
+            throw err;
         }   
     } catch (error) {
-        resp = {status:"error", message:"Something went wrong!", data:{}};
-        res.status(500).send(resp);
+        next(error);
     }
     
 
