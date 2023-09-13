@@ -1,16 +1,11 @@
-import { Request, Response, NextFunction } from "express";
+import { RequestHandler } from "express";
 
 import Quiz from '../models/quiz';
 import ProjectError from "../helper/error";
-import Report from "../models/result";
+import Report from "../models/report";
+import { ReturnResponse } from "../utils/interfaces";
 
-interface ReturnResponse {
-    status: "success" | "error",
-    message: String,
-    data: {} | []
-}
-
-const startExam=async (req:Request, res:Response, next:NextFunction)=>{
+const startExam:RequestHandler=async (req, res, next)=>{
     try {
         const quizId=req.params.quizId;
         const quiz=await Quiz.findById(quizId, {name:1, questions_list:1, is_published:1});
@@ -31,10 +26,7 @@ const startExam=async (req:Request, res:Response, next:NextFunction)=>{
     }
 }
 
-const submitExam=async (req:Request, res:Response, next:NextFunction)=>{
-    const quizId=req.body.quizId;
-    const attempted_questions=req.body.attempted_questions;
-    const quiz=await Quiz.findById(quizId, {answers:1});
+const submitExam:RequestHandler=async (req, res, next)=>{
     try {
         const quizId=req.body.quizId;
         const attempted_questions=req.body.attempted_questions;
@@ -46,7 +38,6 @@ const submitExam=async (req:Request, res:Response, next:NextFunction)=>{
         }
         const userId=req.userId;
         const answers=quiz.answers;
-        res.send(answers);
         const allQuestions=Object.keys(answers);
         const total=allQuestions.length;
         let score=0;
