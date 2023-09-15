@@ -13,7 +13,6 @@ const getUser = async(req:Request,res:Response,next:NextFunction) => {
     let resp:ReturnResponse;
     try {
         const userId = req.params.userId;
-
         if(req.userId!=req.params.userId){
             const err = new ProjectError("You are not authorized!");
             err.statusCode = 401;
