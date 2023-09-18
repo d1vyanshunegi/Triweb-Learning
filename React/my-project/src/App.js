@@ -3,20 +3,21 @@ import About from './pages/About';
 import Contact from './pages/Contact';
 import Product from './pages/Product';
 import {Routes, Route} from 'react-router-dom';
-import MainMenu from './components/layouts/MainMenu';
+import Layout from './components/layouts/Layout';
+import AddProduct  from './pages/AddProduct';
 
 function App() {
   return (
-    <div>
-      <MainMenu />
+    <Layout>
       <Routes>
-      <Route path='/' element=<Home />></Route> 
-      <Route path='/about' element=<About />></Route>
-      <Route path='/contact' element=<Contact />></Route>
-      <Route path='/product' element=<Product />></Route>
+      <Route path='/' element={<Home />}></Route> 
+      <Route path='/about' element={<About />}></Route>
+      <Route path='/contact' element={<Contact />}></Route>
+      <Route path='/product' element={<Product />}></Route>
+      <Route path='/product/add' element={<AddProduct />}></Route>
       </Routes>
       
-    </div>
+    </Layout>
   );
 }
 
