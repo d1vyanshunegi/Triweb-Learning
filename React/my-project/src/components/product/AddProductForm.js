@@ -1,7 +1,7 @@
 import { useRef } from "react";
 import CustomWrapper from "../layouts/CustomWrapper"
 
-const AddProductForm = () => {
+const AddProductForm = (props) => {
     const product_name_ref = useRef();
     const image_ref = useRef();
     const price_ref = useRef();
@@ -19,8 +19,9 @@ const AddProductForm = () => {
             image,
             price,
             description
-        } 
-        console.log(product);
+        }; 
+        
+        props.addProductHandler(product);
     }
 
   return (

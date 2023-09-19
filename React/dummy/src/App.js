@@ -13,7 +13,7 @@ function App() {
   return (
     <div className='modal'>
       <h1>Heading</h1>
-      {modalOpen?<FirstComponent owner="Azhar" reason="For demo" closeModal={modalCloseHandler}/>:null}
+      {modalOpen?<FirstComponent owner="Divyanshu" reason="For demo" closeModal={modalCloseHandler}/>:null}
       {modalOpen?<Backdrop />:null}
     </div>
   );
