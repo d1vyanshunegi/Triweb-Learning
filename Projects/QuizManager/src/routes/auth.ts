@@ -25,8 +25,8 @@ router.post('/', [
                 .catch((err) => {
                     return Promise.reject(err);
                 })
-        })
-        .normalizeEmail(),
+        }),
+        //.normalizeEmail({gmail_remove_dots:false}),
     body('password')
         .trim()
         .isLength({min:8})
