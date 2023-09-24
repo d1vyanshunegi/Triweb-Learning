@@ -14,7 +14,7 @@ const Contact = () => {
                     I'm interested and open to new opportunities. However, if you have any other requests or
                     questions, please don't hesitate to contact me.
                 </p>
-                <span>
+                <span className='contact-b'>
                     <a className='flat-button' href="mailto:divyanshunegi1@gmail.com">Email</a>
                     <a
                         href="https://www.linkedin.com/in/divyanshunegi1/"

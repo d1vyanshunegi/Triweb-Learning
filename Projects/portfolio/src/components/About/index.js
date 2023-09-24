@@ -19,10 +19,10 @@ const About = () => {
                 About Me
             </h1>
             <p className='para'>
-                I'm a computer science undergrad student and a practicing fullstack web developer looking for an opportunity to work with the latest technologies on challenging and diverse projects.
+                I'm a computer science undergrad student and a practicing fullstack web developer, looking for an opportunity to work with the latest technologies on challenging and diverse projects.
             </p>
             <p className='para'>
-                I'm experienced with various web development technologies including HTML5, CSS3, JavaScript, TypeScript, ReactJS, NodeJS, ExpressJS. I'm also familiar with RDBMS like MySQL and NoSQL databases like MongoDB.
+                I'm experienced with various web development technologies including HTML5, CSS3, JavaScript, TypeScript, ReactJS, NodeJS and ExpressJS. I'm also familiar with RDBMS like MySQL and NoSQL databases like MongoDB.
             </p>
             <p className='para'>
                 I have also worked with various tools like Postman for API testing, Jira for agile product management and Git and GitHub for version control.
@@ -33,7 +33,7 @@ const About = () => {
             
             </div>
             
-          
+            <div className='Icons'>
             <div className="face1">
               <FontAwesomeIcon icon={faJsSquare} color="#EFD81D" />
             </div>
@@ -52,6 +52,8 @@ const About = () => {
             <div className="face6">
               <FontAwesomeIcon icon={faGitAlt} color="#EC4D28" />
             </div>
+            </div>
+            
             
         </div>
        
