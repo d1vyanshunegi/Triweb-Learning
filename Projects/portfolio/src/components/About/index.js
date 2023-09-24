@@ -52,7 +52,7 @@ const About = () => {
             <div className="face6">
               <FontAwesomeIcon icon={faGitAlt} color="#EC4D28" />
             </div>
-
+            
         </div>
        
     )

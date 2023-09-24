@@ -11,7 +11,7 @@ const Home = () => {
                     a web developer.
                 </h1>
                 <h2>Fullstack Developer/ MERN / JavaScript / TypeScript</h2>
-                <Link to="/contact" className='flat-button'>CONTACT ME</Link>&nbsp;
+                <Link to="/contact" className='flat-button'>CONTACT ME</Link>;
                 <a style={{ marginLeft: '7rem' }} href={require("../../assets/Resume.pdf")} className='flat-button' download="resume">RESUME</a>
             </div>
             <Logo />
