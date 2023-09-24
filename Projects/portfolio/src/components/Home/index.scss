@@ -64,7 +64,6 @@
       text-decoration: none;
       padding: 10px 18px;
       border: 1px solid #5ce1e6;
-      //box-shadow: 5px 10px #333;
       margin-top: 25px;
       float: left;
       animation: fadeInAnimation 1s 1.8s backwards;
@@ -72,7 +71,7 @@
   
       &:hover {
         background: #5ce1e6; 
-       // box-shadow: 5px 10px #333;
+        box-shadow: 5px 10px #272727;
         color: #333;
       }
     }

@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import './index.scss'
+import Logo from './Logo'
 
 const Home = () => {
   
@@ -13,6 +14,7 @@ const Home = () => {
                 <Link to="/contact" className='flat-button'>CONTACT ME</Link>&nbsp;
                 <a style={{ marginLeft: '7rem' }} href={require("../../assets/Resume.pdf")} className='flat-button' download="DivyanshuNegiResume">RESUME</a>
             </div>
+            <Logo />
         </div>
     )
   }

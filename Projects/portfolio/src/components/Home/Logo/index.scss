@@ -1,0 +1,18 @@
+.logo-container {
+    z-index: 0;
+    width: 400px;
+    height: 465px; //609
+    //opacity: 1;
+    position: absolute;
+    top: 0;
+    right: 15%;
+    bottom: 0;
+    left: 60%;
+    margin: auto;
+    animation: fade 6s infinite;
+}
+
+@keyframes fade {
+  0%,100% { opacity: 0.3 }
+  50% { opacity: 1 }
+}
