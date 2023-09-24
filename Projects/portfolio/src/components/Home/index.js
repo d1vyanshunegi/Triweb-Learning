@@ -12,7 +12,7 @@ const Home = () => {
                 </h1>
                 <h2>Fullstack Developer/ MERN / JavaScript / TypeScript</h2>
                 <Link to="/contact" className='flat-button'>CONTACT ME</Link>&nbsp;
-                <a style={{ marginLeft: '7rem' }} href={require("../../assets/Resume.pdf")} className='flat-button' download="DivyanshuNegiResume">RESUME</a>
+                <a style={{ marginLeft: '7rem' }} href={require("../../assets/Resume.pdf")} className='flat-button' download="resume">RESUME</a>
             </div>
             <Logo />
         </div>
