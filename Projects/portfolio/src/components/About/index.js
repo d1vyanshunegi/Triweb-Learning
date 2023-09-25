@@ -1,7 +1,6 @@
 import './index.scss'
 import { Icon } from '@iconify/react';
 import {
-    faAngular,
     faCss3,
     faGitAlt,
     faHtml5,

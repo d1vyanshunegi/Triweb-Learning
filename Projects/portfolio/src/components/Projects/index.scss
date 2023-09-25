@@ -1,0 +1,74 @@
+h1 {
+    top: 15%;
+    left: 10%;
+    font-size: 53px;
+    font-family: 'Coolvetica';
+    color: #5ce1e6;
+    font-weight: 400;
+    margin-top: 0;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.scroll {
+    background-color: #2c2c2c;
+    margin-top: 10%;
+    margin-left: 7%;
+    width: 90%;
+    height: 470px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    display: flex;
+    justify-content:flex-start; //flex-start for multiple projects
+    border: 2px solid #393a3a;
+    border-radius: 10px;
+    box-shadow: 2px 2px 15px #222222;
+}
+
+.ticket {
+    color: antiquewhite;
+    background-color: #3f3f3f;
+    flex: 0 0 18%;
+    font-size:medium;
+    width: 20%;
+    height: 90%;
+    border: 2px solid #2e2e2e;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    word-wrap: break-word;
+    white-space: pre-wrap;
+    word-break: break-word;
+    padding:  10px 10px 10px 10px;
+    margin-top: 2%;
+    border-radius: 10px;
+    overflow-y: auto;
+}
+
+.b{
+    color: #5ce1e6;
+    font-size:small;
+    width: 70%;
+    font-weight: bold;
+    font-family: sans-serif;
+    text-decoration: none;
+    padding: 10px 18px;
+    border: 1px solid #5ce1e6;
+    border-radius: 15px;
+    margin-top: 5px;
+    animation: fadeInAnimation 1s 1.8s backwards;
+    white-space: nowrap;
+
+    &:hover {
+      background: #5ce1e6; 
+      box-shadow: 5px 10px #272727;
+      color: #333;
+    }
+}
+
+.head {
+    font-size: x-large;
+    color: #5ce1e6;
+}

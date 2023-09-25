@@ -14,16 +14,18 @@ const Contact = () => {
                     I'm interested and open to new opportunities. However, if you have any other requests or
                     questions, please don't hesitate to contact me.
                 </p>
-                <span className='contact-b'>
-                    <a className='flat-button' href="mailto:divyanshunegi1@gmail.com">Email</a>
+                
+                    <a className='flat-button emailB' href="mailto:divyanshunegi1@gmail.com">Email</a>
                     <a
                         href="https://www.linkedin.com/in/divyanshunegi1/"
                         target="_blank"
                         rel="noreferrer"
-                    >
-                        <FontAwesomeIcon icon={faLinkedin} className="linkedin" />
-                    </a>
-                </span>
+                        className='flat-button linkedinB'
+                    > 
+                        
+                        <FontAwesomeIcon icon={faLinkedin} className="linkedin"  />
+                        Connect</a>
+               
             </div>
         </div>
         </>
